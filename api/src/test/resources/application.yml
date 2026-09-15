@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://test.auth0.com/
+          audiences:
+            - https://taskly.test
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+taskly:
+  roles-claim: https://taskly.clara.team/roles
+  cors-origin: http://localhost:5173

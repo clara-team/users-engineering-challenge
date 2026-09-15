@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://<your-tenant>.us.auth0.com/   # trailing slash required
+          audiences:
+            - <your-api-identifier>
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+taskly:
+  roles-claim: https://taskly.clara.team/roles
+  cors-origin: http://localhost:5173

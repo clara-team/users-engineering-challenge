@@ -1,0 +1,16 @@
+# API
+api/target/
+api/src/main/resources/application.yml
+api/.mvn/wrapper/maven-wrapper.jar
+
+# Web
+web/node_modules/
+web/dist/
+web/.env.local
+web/.env.*.local
+web/*.tsbuildinfo
+
+# IDE
+.idea/
+*.iml
+.vscode/
