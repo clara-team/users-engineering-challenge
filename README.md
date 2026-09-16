@@ -31,6 +31,8 @@ Your job is to implement the API service layer and the React web components.
 
 Full requirements, Auth0 setup (including the post-login Action), and submission instructions are in [BRIEF.md](BRIEF.md).
 
+AI is allowed and expected. Fill in [AI_USAGE.md](AI_USAGE.md) as part of the submission.
+
 ---
 
 ## Prerequisites

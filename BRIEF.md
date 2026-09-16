@@ -4,6 +4,8 @@ Build the service layer and React UI for a company-scoped task board. Auth0 issu
 
 **Time box: 4–6 hours.** Stop when the API tests you were asked to fill in are green and a member vs admin can use the board. Styling is optional. Do not add an Auth0 Management API client.
 
+AI is **allowed and expected** (Cursor, Copilot, ChatGPT, Claude, etc.). Complete **[AI_USAGE.md](AI_USAGE.md)** — actual prompts, accepted suggestions, rejected suggestions and why, and corrections. Generated code is fine; unexplained generated code is not. The debrief will ask you to defend it.
+
 ---
 
 ## What is already provided
@@ -133,6 +135,21 @@ Offline. Fill in the stubs in:
 
 1. A git remote we can clone (private is fine; grant access).
 2. In the PR / README note: JDK 21, how to run API + SPA, and that `./mvnw test` is green.
-3. Do not commit `application.yml` or `.env.local`.
+3. Filled-in [AI_USAGE.md](AI_USAGE.md).
+4. Do not commit `application.yml` or `.env.local`.
 
-We will look at tenant isolation, role enforcement, the member state machine (especially last-admin and offboard), and whether the UI matches the token — not at visual polish.
+---
+
+## Delivery checklist
+
+- [ ] Company only from `CompanyContext` — never from the request
+- [ ] Cross-company id → 404, not 403
+- [ ] Member lifecycle + last-admin guards
+- [ ] Offboard open-tasks policy, with a test
+- [ ] Task transitions; invalid → 422
+- [ ] Stub tests filled in; `./mvnw test` green
+- [ ] Admin-only UI absent from the DOM for members
+- [ ] [AI_USAGE.md](AI_USAGE.md) has prompts, accepted / rejected / corrections
+- [ ] No `application.yml` or `.env.local` committed
+
+We will look at tenant isolation, role enforcement, the member state machine (especially last-admin and offboard), whether the UI matches the token, and whether you own the AI-assisted parts — not at visual polish.
